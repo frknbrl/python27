@@ -1,0 +1,76 @@
+<DOCTYPE html>
+<html>
+<head>
+    <title>{% block sayfa_baslik %}Furkan Birol{% endblock %}</title>
+	
+	<!-- Dakikada bir URL'de yazan l dosyayı aktif URL'in sonuna ekleyerek sayfayı yeniler -->
+	<meta http-equiv="refresh" content="60;URL=">
+	
+	<style type="text/css">
+		
+				* {
+			margin:0;
+			padding:0;
+		}
+		
+		body {
+			font:13px "Trebuchet MS", Arial, Helvetica, sans-serif;
+			background:#EEE;
+		}
+		 
+		table {
+			width:600px;
+			margin:200px auto;
+			table-layout:fixed;
+			border-collapse:collapse;
+		}
+		 
+		caption {
+			font-size:18px;
+			margin-bottom:10px;
+			color:#CC0;
+			font-weight:bold;
+			caption-side:top;
+		}
+		 
+		tr:nth-child(odd) {
+			background:#DDD;
+		}
+		 
+		td, th {
+			padding:8px;
+		}
+		 
+		th {
+			background:#0DD;
+		}
+		
+	</style>
+	
+<head>
+<body>
+  
+    {% block ust %}
+        <div style="border: 2px solid #ddd;padding: 10px; margin-bottom: 20px">
+			<div id="header">
+				<div id="logo">
+					<h1><a href="#">Furkan <span class="title">Birol</span></a></h1>
+					<p>To Imagine, Investigate, Make it...</p>
+				</div>
+			</div>
+		</div>
+    {% endblock %}
+ 
+    <h1>{% block baslik %}{% endblock %}</h1>
+    {% block icerik %}{% endblock %}
+ 
+      
+    {% block alt %}
+        <div style="border: 2px solid #ddd;padding: 10px;margin-top:20px">
+			<div class="footer">
+				&copy; Copyright 2017 Kişisel Blog Sitesi, Design: Furkan Birol
+			</div>
+        </div>
+    {% endblock %}
+</body>
+</html>

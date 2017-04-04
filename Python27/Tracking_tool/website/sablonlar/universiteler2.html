@@ -1,0 +1,18 @@
+{% extends "iskelet.html" %}
+ 
+    {% block sayfa_baslik %}Üniversiteler{% endblock%}
+ 
+    {% block ust %}
+        <div style="border: 2px solid #ddd;padding: 10px; margin-bottom: 20px">
+        Burası projemizin üst kısmıdır
+        </div>
+    {% endblock %}
+ 
+    {% block icerik %}
+        <table border="1">
+            <tr><th>Adı</th><th>Şehir</th><th>Fakülte Sayısı</th><th>Öğrenci Sayısı</th></tr>
+            {% for uni in universiteler %}
+            <tr><td>{{ uni.0 }}</td><td>{{ uni.1 }}</td><td>{{ uni.2 }}</td><td>{{ uni.3 }}</td></tr>
+            {% endfor %}
+        </table>
+    {% endblock %}

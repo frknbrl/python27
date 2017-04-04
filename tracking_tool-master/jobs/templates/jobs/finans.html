@@ -1,0 +1,34 @@
+{% extends "index.html" %}
+
+    {% block icerik %}
+        <table border="1">
+
+			<caption>Çeyrek Altın Durum Tablosu</caption>
+
+			<tr>
+				<th colspan=5>Çeyrek Altın Durum Tablosu</th>
+			</tr>
+
+            <tr>
+				<th>Alınan Veri Zamanı</th>
+				<th>Satış Fiyatı</th>
+				<th>Alış Fiyatı</th>
+				<th>Yüzdelik Değişim</th>
+				<td rowspan=2><input type="button" value="Yenile" onClick="window.location.reload(false)" /></td>
+			</tr>
+
+            <tr>
+				<td>{{ now }}</td>
+				<td>{{ ceyrekAltinSatisFiyati }}</td>
+				<td>{{ ceyrekAltinAlisFiyati }}</td>
+				<td>{{ ceyrekAltinYuzdelikDegisim }}</td>
+			</tr>
+
+			<!--
+			{% for veri in anlikVeriler %}
+            <tr><td>{{ veri.0 }}</td><td>{{ veri.1 }}</td><td>{{ veri.2 }}</td><td>{{ veri.3 }}</td></tr>
+            {% endfor %}
+			-->
+
+        </table>
+    {% endblock %}

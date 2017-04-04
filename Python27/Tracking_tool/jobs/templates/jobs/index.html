@@ -1,0 +1,99 @@
+{% load staticfiles %}
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"> <head> <meta charset="utf-8" />
+    <head>
+	
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+			
+		<!-- Dakikada bir URL'de yazan l dosyayi aktif URL'in sonuna ekleyerek sayfayi yeniler -->
+		<meta http-equiv="refresh" content="60;URL=">
+
+        <title>Furkan Birol</title>		
+		<link rel="stylesheet" href="{% static 'css/stil.css' %}">
+        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+		<link href="http://fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+    </head>
+	
+    <body>
+        <div class="navbar navbar-inverse navbar-static-top">
+			<div class="container">	
+			
+				<a href="#" class="navbar-brand">Furkan Birol</a>
+				
+				<button class="navbar-toggle" data-toggle="collapse" data-target=".navbarSec">
+				
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				
+				</button>
+				
+				<div class="collapse navbar-collapse navbarSec">		
+					<ul class="nav navbar-nav navbar-right">
+						<li class="active"><a href="http://127.0.0.1:8000/#">Anasayfa</a></li>    
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" >Teknoloji <b class="caret"></b></a>
+							<ul class="dropdown-menu">
+								<li><a href="#">Yazilim</a></li>
+								<li><a href="#">Yazilim Testi</a></li>
+								<li><a href="#">WEB</a></li>
+							</ul>
+						</li>
+						<li><a href="http://127.0.0.1:8000/finans/">Finans</a></li>
+						<li><a href="#">Projeler</a></li>
+						<li><a href="#">Hakkimda</a></li>
+						<li><a href="#">Iletisim</a></li>
+					</ul>
+				</div>
+			</div>
+
+		</div>
+		
+		
+		<div class="row">
+		
+			<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+			
+				<img src="{% static 'images/profil_avatar.jpg' %}" class="img-responsive">
+				<p></p>
+				<p class="bg-success">Kullanici Bilgileri  :  Furkan Birol</p>
+				<p class="bg-success">Kullanici Yetki Tipi : Admin</p>
+                <a href="" class="navbar-btn btn-primary btn" onClick="window.location.reload(false)">Yenile</a>
+				<a href="/cikis/" class="navbar-btn btn-danger btn">Logout</a>
+
+			</div>
+			
+			<div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
+			
+			 
+				{% block icerik %}
+				
+					<div class="gbox">
+						<p class="navbar-text">Merhabalar, bu sitede bir <a href="#">Yazilim Test Muhendisi</a>'nin (O ben oluyorum :) ) ilgi alanlarini (bu alanlar icerisinde: Teknoloji (tabi ki olacak meslegimiz sonucta :) ), Borsa (Bir firmada calisirken hayir diyemeyecekleri yasal ikinci is, eger yapabilirsen :) ), Tecrubeler (Bilgi paylastikca guzeldir degil mi :) ), Sosyal konular) bulabilirsiniz.</p>
+					</div>
+					
+					<p class="navbar-text"><h2><a href="#">Kimdir bu Yazilim Test Muhendisleri?</a></h2></p>
+					<p class="navbar-text">Yoksa robotlardan once onlar mi ele gecirecek dunyayi :)</p>
+					<p class="navbar-text">Korkmayin :), Yazilim Test Muhendisleri'nin dunyayi ele gecirmek gibi bir gayesi yok. Yazilim Test Muhendisleri: Icinde bulundugumuz teknoloji caginda parlamaya baslayan ve gelecegin meslekleri arasinda yer alan bir meslektir. Aslinda bir urunun kalitesini de bir nevi bu meslek belirler. Ne alakasi var diyebilirsin. Soyle ki, artik bircok sey yazilimla kontrol edilebiliyor ve pek cok insan milyonlarca satir kod yazarak bu kontrole katki da bulunuyorlar. Yazilimsal bir urunu kodlayan kisi tabi ki kendi hatalarini ancak bir yere kadar gorebilir. Cunku hep ayni acidan, ayni dusunce tarziyla bakacaktir yazdigi koda. Aslinda yazdigi kod onun evladidir bir yerde. Dolayisiyla bazi hatalari gormez (gormezden gelir). Iste tam burada Yazilim Test Muhendisi devreye girer. Test edilebilecek bir urun ortaya ciktiginda once bu urunun ne yagtigini ogrenerek kendine bir test havuzu olusturur. Bu urunu musteri memnuniyeti ve urun kalitesi icin elinden geldigince test eder ve en az hata ile tamamlamaya calisir. ( Niye sifir hata demedim acaba? Kanka Teknoloji Cagi dedik ya iste :) Mukemmel kod yoktur, Az test suresi vardir :) Yaz bunu ilerde Testci atasozu olacak... ) Bu sayede urunu cocugu gibi gormeyen, ona muhtemel hatali kod olarak bakan objektif bir goz ile kalite mumkun oldugunca arttirilir. Yazilim Test Muhendisi demek kalite demektir. :) </p>
+
+				{% endblock %}
+						
+			</div>
+		
+		
+		</div>		
+		
+		<div class="navbar navbar-default navbar-fixed-bottom">		
+			<div class="container">
+				<p class="navbar-text pull-left">&copy; Copyright 2017 Kisisel Blog Sitesi, Design: Furkan Birol</p>
+				<a href="#" class="navbar-btn btn-info btn pull-right">Bagis Yapabilirsiniz</a>
+			</div>
+        </div>
+
+
+		<script src="{% static 'js/jquery-3.1.1.min' %}"></script>
+		<script src="{% static 'js/bootstrap.min.js' %}"></script>
+		<script src="http://code.jquery.com/jquery-latest.min.js"></script> <script src="js/bootstrap.min.js"></script> <script> $(function(){ $('.nav-tabs a:first').tab('show'); }); </script>
+    </body>
+</html>

@@ -1,0 +1,17 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+--------PYTHON Help Document----------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+C:\>cd Python27
+
+C:\Python27>cd Tracking_Tool
+
+C:\Python27\Tracking_Tool>python manage.py runserver
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 13, 2017 - 22:22:35
+Django version 1.10.5, using settings 'website.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+

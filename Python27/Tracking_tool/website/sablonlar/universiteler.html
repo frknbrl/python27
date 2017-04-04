@@ -1,0 +1,17 @@
+{% include "ust_kisim.html" %}
+ 
+<table border="1">
+ <tr>
+  <th>Adı</th><th>Şehir</th><th>Fakülte Sayısı</th><th>Öğrenci Sayısı</th>
+ </tr>
+ {% for uni in universiteler %}
+  <tr>
+   <td>{{uni.0}}</td>
+   <td>{{uni.1}}</td>
+   <td>{{uni.2}}</td>
+   <td>{{uni.3}}</td>
+  </tr>
+ {%endfor%}
+</table>	
+ 
+{% include "alt_kisim.html" %}

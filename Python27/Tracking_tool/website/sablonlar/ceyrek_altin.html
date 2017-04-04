@@ -1,0 +1,69 @@
+{% extends "C:\\Python27\\Tracking_Tool\\jobs\\templates\\jobs\\index.html" %}
+ 
+    {% block icerik %}
+	
+		<div class="table-responsive">
+		
+			<table  class="table table-striped table-bordered table-hover">
+			
+				<!--
+				<caption>Çeyrek Altın Durum Tablosu</caption>
+				-->
+				
+				<tr>
+					<th  class="success" colspan=5>Çeyrek Altın Durum Tablosu</th>
+				</tr>
+						
+				<tr>
+					<th class="info">Alınan Veri Zamanı</th>
+					<th class="info">Satış Fiyatı</th>
+					<th class="info">Alış Fiyatı</th>
+					<th class="info">Yüzdelik Değişim</th>
+					<td class="danger" rowspan=2><input type="button" value="Yenile" onClick="window.location.reload(false)" /></td>
+				</tr>
+				
+				<tr>
+					<td>{{ now }}</td>
+					<td>{{ ceyrekAltinSatisFiyati }}</td>
+					<td>{{ ceyrekAltinAlisFiyati }}</td>
+					<td>{{ ceyrekAltinYuzdelikDegisim }}</td>
+				</tr>
+				
+				<!--
+				{% for veri in anlikVeriler %}
+				<tr><td>{{ veri.0 }}</td><td>{{ veri.1 }}</td><td>{{ veri.2 }}</td><td>{{ veri.3 }}</td></tr>
+				{% endfor %}
+				-->
+				
+			</table>
+			
+		</div>
+		
+		<div class="table-responsive">
+		
+			<table  class="table table-striped table-bordered table-hover">
+				
+				<tr>
+					<th  class="success" colspan=5>Gram Altın Durum Tablosu</th>
+				</tr>
+						
+				<tr>
+					<th class="info">Alınan Veri Zamanı</th>
+					<th class="info">Satış Fiyatı</th>
+					<th class="info">Alış Fiyatı</th>
+					<th class="info">Yüzdelik Değişim</th>
+					<td class="danger" rowspan=2><input type="button" value="Yenile" onClick="window.location.reload(false)" /></td>
+				</tr>
+				
+				<tr>
+					<td>{{ now }}</td>
+					<td>{{ gramAltinSatisFiyati }}</td>
+					<td>{{ gramAltinAlisFiyati }}</td>
+					<td>{{ gramAltinYuzdelikDegisim }}</td>
+				</tr>
+						
+			</table>
+			
+		</div>
+
+    {% endblock %}
